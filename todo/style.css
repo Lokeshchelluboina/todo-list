@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: blue;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container */
+.container {
+    background-color: palevioletred;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    width: 70vw;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Task form */
+.task-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 4px;
+}
+
+#add-task-btn {
+    width: 25%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#add-task-btn:hover {
+    background-color: #388e3c;
+}
+
+/* Task list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafaf9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed task */
+li.completed {
+    text-decoration: line-through;
+    background-color: #e0ffe0;
+}
+
+/* Task text & date */
+.task-text-n-date {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 60%;
+    font-size: 12px;
+}
+
+/* Task actions */
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #185dcc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4caf50;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .container {
+        width: 90vw;
+    }
+
+    .task-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #task-input,
+    #add-task-btn {
+        width: 100%;
+    }
+}
